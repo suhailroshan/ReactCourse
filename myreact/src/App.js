@@ -1,5 +1,6 @@
 import FirstPage from "./Components/FirstAssignment";
 import StateVariables from "./Components/Assignmentone";
+import Lifecycle from "./Components/Lifecycle";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         textAlign:"left"
       }}
     >
-      <StateVariables />
+      <Lifecycle />
     </div>
   );
 }
