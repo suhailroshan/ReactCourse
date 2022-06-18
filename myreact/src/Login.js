@@ -42,15 +42,17 @@ export default class Login extends React.Component {
         })
             .then((res) => res.json())
             .then((resJson) => {
-                this.setState({
-                    errorMsg: resJson.error,
-                    IsLoginSuccess: ((typeof(resJson.token)!="undefined") ? true : false)
-                })
+                if (resJson.token !== null && resJson.token !== undefined) {
+                    alert("Login successfull");
+                  } else {
+                    alert("Login failed. Please check your user name and password");
+                  }
+                  console.log(resJson);
                 
             }) 
     }
     handleLogOut = () => {
-        this.setState({ IsLoginSuccess:false})
+        this.setState({IsLoginSuccess:false});  
     }
 
     render() {
@@ -64,16 +66,16 @@ export default class Login extends React.Component {
                     justifyContent="center"
                     style={{ minHeight: '100', minWidth :100,borderWidth:1}}>
                     {this.state.IsLoginSuccess === false &&
-                        <Grid item xs={12} md={6} style={{ minheight: 500, minWidth: 500 }}>
+                        <Grid item xs={12} md={3} style={{ minheight: 500, minWidth: 500 }}>
                             <TextField
-                                fullWidth
+                               fullWidth
                                 id="outlined-basic"
                                 class="mb-1"
                                 variant="outlined"
                                 onChange={this.handleEmail}
                                 placeholder="Enter Email" />
                             <TextField
-                                fullWidth
+                               fullWidth
                                 id="outlined-basic"
                                 variant="outlined"
                                 onChange={this.handlePassword}
