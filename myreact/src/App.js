@@ -3,6 +3,7 @@ import StateVariables from "./Components/Assignmentone";
 import Lifecycle from "./Components/Lifecycle";
 import ConditionalRendering from "./Components/ConditionalRendering";
 import Fetcher from "./Fetcher";
+import Login from "./Login";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         textAlign:"left"
       }}
     >
-      <Fetcher />
+      <Login />
     </div>
   );
 }
