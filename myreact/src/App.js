@@ -2,6 +2,7 @@ import FirstPage from "./Components/FirstAssignment";
 import StateVariables from "./Components/Assignmentone";
 import Lifecycle from "./Components/Lifecycle";
 import ConditionalRendering from "./Components/ConditionalRendering";
+import Fetcher from "./Fetcher";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         textAlign:"left"
       }}
     >
-      <ConditionalRendering />
+      <Fetcher />
     </div>
   );
 }
