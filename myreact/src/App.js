@@ -4,7 +4,9 @@ import Lifecycle from "./Components/Lifecycle";
 import ConditionalRendering from "./Components/ConditionalRendering";
 import Fetcher from "./Fetcher";
 import Login from "./Login";
-
+import Timer from "./Components/Timer";
+import Functional from "./FunctionalComponents";
+import UserList from "./Components/Sample"
 function App() {
   return (
     <div
@@ -18,7 +20,7 @@ function App() {
         textAlign:"left"
       }}
     >
-      <Login />
+      <UserList />
     </div>
   );
 }
